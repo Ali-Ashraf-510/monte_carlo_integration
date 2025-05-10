@@ -16,7 +16,7 @@ def monte_carlo_integration(f, a, b, n_points):
     points_under = []
     points_above = []
 
-    for _ in range(n_points):
+    for _ in range(n_points):   
         x = random.uniform(a, b)
         y = random.uniform(0, max_y)
 
