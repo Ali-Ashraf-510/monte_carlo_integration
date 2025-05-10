@@ -1,20 +1,5 @@
 # Monte Carlo Integration GUI
 
-## Table of Contents
-
-* [Overview](#overview)
-* [Features](#features)
-* [Installation](#installation)
-* [Usage](#usage)
-* [How It Works](#how-it-works)
-
-  * [Monte Carlo Integration](#monte-carlo-integration)
-  * [GUI Components](#gui-components)
-* [Code Structure](#code-structure)
-* [Example](#example)
-* [Dependencies](#dependencies)
-* [License](#license)
-
 ## Overview
 
 Monte Carlo Integration GUI is a Python application that provides an intuitive graphical interface for performing Monte Carlo integration—a probabilistic method for approximating the area under a curve (definite integral). It allows users to input a function, specify integration bounds, and choose the number of random points for the simulation.
