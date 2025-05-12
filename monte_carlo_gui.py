@@ -13,23 +13,23 @@ def calculate_integral():
         def f(x):
             return eval(func_str, {"x": x})
 
-        # إجراء الحساب باستخدام الدالة في الملف المنفصل
+        # Perform calculation using the function from separate file
         estimated, area_under, area_above, points_under, points_above, max_y, rect_area = monte_carlo_integration(f, a, b, n_points)
 
-        # عرض النتائج في الواجهة
+        # Display results in the interface
         result_label.config(text=f"Approximate Integral: {estimated:.6f}")
         area_label.config(text=f"Total Rectangle Area: {rect_area:.6f}")
         under_label.config(text=f"Area Under Curve: {area_under:.6f}")
         above_label.config(text=f"Area Above Curve: {area_above:.6f}")
         error_label.config(text=f"Error: {abs(0.5 - estimated):.6f}")
 
-        # رسم الرسم البياني
+        # Plot the graph
         plt.figure(figsize=(10, 6))
         plt.title('Monte Carlo Integration by Darts')
         plt.xlabel('x')
         plt.ylabel('y')
 
-        # عرض النقاط تحت وفوق المنحنى
+        # Display points above and below the curve
         x_under, y_under = zip(*points_under) if points_under else ([], [])
         x_above, y_above = zip(*points_above) if points_above else ([], [])
         
@@ -47,7 +47,7 @@ def calculate_integral():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-# تصميم الواجهة
+# Interface design
 app = tk.Tk()
 app.title("Monte Carlo Integration GUI")
 app.geometry("500x500")
